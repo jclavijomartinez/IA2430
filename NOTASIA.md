@@ -6,6 +6,7 @@
   - [1/08/24](#10824)
   - [6/08/24](#60824)
   - [8/08/24](#80824)
+  - [13/08/24](#130824)
 
 ## 18/07/24
 
@@ -137,3 +138,19 @@ TAREA PARA EL 19/08 11:59 pm-> IMPLEMENTAR GRAD. DESC indivin
           - uso la matriz de covarianza
         - quiero minimizar la varianza intraclase, quiero que se lo mas pequeña posible
         - sumamos el tetha0, porque corre los elementos a la izq o a la der, porque quiero poner 0 en la mitad de los 2
+
+## 13/08/24
+
+- para solucionar el problema de usar regresion en un clasificador, se usa regresion logística
+- la funcion logistica
+  - tiene salida continua
+  - es un método de clasificación, a pesar de que se conoce como regresión
+  - el span (región de la pendiente, transicion entre 0 y 1 de la func) depende de los valores de theta1, theta0 controla el movimiento horizontal de la logistica
+    - cuando veamos redes neuronales, el span va a ser importante para la inicialización
+  - ML en general: la ciencia que mapea datos de entrada a datos de salida
+    - la diferencia está en la variable de salida
+  - hablamos de una regresion logistica, porque la salida del modelo es continua, es de clasificacion porque lo entreno con datos cuya salida es discreta.
+  - puedo interpretar la salida como una probabilidad, a medida que avanzo en la funcion, la P(xeC1).
+  - Uso una funcion de transformación para hacer el dual (repasar video de clase si tengo dudas)
+  - la desventaja es que debo saber que funcion me separa las dos clases
+  - para regresion se usa alguna medida de error, para clasificacion usar cross entropia como func. de costo
