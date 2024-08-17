@@ -7,6 +7,7 @@
   - [6/08/24](#60824)
   - [8/08/24](#80824)
   - [13/08/24](#130824)
+  - [15/08/24](#150824)
 
 ## 18/07/24
 
@@ -154,3 +155,35 @@ TAREA PARA EL 19/08 11:59 pm-> IMPLEMENTAR GRAD. DESC indivin
   - Uso una funcion de transformación para hacer el dual (repasar video de clase si tengo dudas)
   - la desventaja es que debo saber que funcion me separa las dos clases
   - para regresion se usa alguna medida de error, para clasificacion usar cross entropia como func. de costo
+
+## 15/08/24
+
+- inicializacion de la func. logistica
+  - para entrenarla se usa grad. desc.
+  - ¿cómo afecta la inicializacion de los parametros a la derivada?
+    - la derivada de h es una montaña pequeña
+    - en la reg. logist es comun inicializar GD en $\theta = 0$
+- regularización
+  - hay un concepto llamado sobreajuste (overfit) ej: memorizar el documento para el parcial y no las generalidaes
+  - un modelo esta sobreajustado si se ha memorizado los datos de entreanmiento
+  - los modelos mas sencillos son los  modelos preferibles (occam's razor)
+- EL PROYECTO FINAL ES HACER UN CLASIFICADOR, SE HACEN TODAS PERO SE USA SOLO UNA, IMPORTANTE ANALIZAR COMPLEJIDAD
+- ¿Como se incorpora esto en la func de costo?
+  - npi
+- clasificacion multiclase
+  - como solo conozco la logistica, uso es funcion varias veces, esta estrategia se llama one vs. all
+    - diseñar una reg. logistica, considerando cada clase com clase 1 como clase 0
+    - un problema de 3 clases se vuelve 3 problemas binarios
+  - para regresion multinomial se usa la funcion softmax, no la logística
+  - PRIMER PROYECTO CON REGRESION MULTINOMIAL Y OTRA CLASIFICAR DIGITOS ESCRITOS A MANO
+- K-nearest neighbors
+  - muy poderoso
+  - la idea es sencilla el problema es costo computacional
+  - "dime con quien andas y te dire quien eres"
+  - la metrica usada es distancia euclidea
+  - para medir quienes me rodean, se define una región conocida como vecindario, heighborhood, da hood
+  - se deben tener datos de entrenamiento, ahi está la copmplejidad, necesito muchos datos y medir muchas distancias
+  - para un nuevo elemento encuentro los k vecinos mas cercanos
+    - k es el numero de elementos, no defino radio de busqueda, sino numero de elementos cercanos
+    - teniendo los vecinos identifico la clase mayoritaria para esos vecinos y asigno al elemento bajo analisis la clase mayoritaria de los vecinos
+    - ¿cual es el mejor valor de k o cuantos vecinos miro?
