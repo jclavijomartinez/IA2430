@@ -8,6 +8,8 @@
   - [8/08/24](#80824)
   - [13/08/24](#130824)
   - [15/08/24](#150824)
+  - [20/08/24](#200824)
+  - [22/08/24](#220824)
 
 ## 18/07/24
 
@@ -176,6 +178,8 @@ TAREA PARA EL 19/08 11:59 pm-> IMPLEMENTAR GRAD. DESC indivin
     - un problema de 3 clases se vuelve 3 problemas binarios
   - para regresion multinomial se usa la funcion softmax, no la logística
   - PRIMER PROYECTO CON REGRESION MULTINOMIAL Y OTRA CLASIFICAR DIGITOS ESCRITOS A MANO
+    - usar k nearest neighbors y logistica
+    - se publica el jueves 22
 - K-nearest neighbors
   - muy poderoso
   - la idea es sencilla el problema es costo computacional
@@ -187,3 +191,28 @@ TAREA PARA EL 19/08 11:59 pm-> IMPLEMENTAR GRAD. DESC indivin
     - k es el numero de elementos, no defino radio de busqueda, sino numero de elementos cercanos
     - teniendo los vecinos identifico la clase mayoritaria para esos vecinos y asigno al elemento bajo analisis la clase mayoritaria de los vecinos
     - ¿cual es el mejor valor de k o cuantos vecinos miro?
+
+## 20/08/24
+
+- problema del iris (clasificación de flores, ca. 1939)
+  - un biologo quería clasificar las flores iris, tiene 3 especies, midió la longitud del pétalo, ancho del pétalo, long. del sépalo y ancho del sépalo
+  - en una tabla estaba clasificando las diferentes especies
+  - es muy fácli de separar
+- es  bueno que para 2 clases el numero de vecinos sea impar, para mas clases es bueno que sea primo
+- la metrica habitual es la distancia euclidea, pero hay mas: manhattan, mahalanobis (transformacion segun la distribución)
+- K means
+  - es un algoritmo de agrupamiento, de aprendizaje no supervisado
+  - solo tengo los datos de entrada, no de salida
+  - no hay variable objetivo
+  - distribucion de probabilidad
+  - va a estimar la media de la distribucion
+  - usa distancia como metrica
+  - k es el numero de grupos que se tiene
+  - tarea 2: implementar k-means
+
+## 22/08/24
+
+- Aprendizaje no supervisado
+  - k means es top down, agrupo los datos y en funcion del agrupamiento, empiezo a hacer ajustes
+  - correlacion: que tan fuerte es la rel lineal entre 2 variables
+  - la correlacion entre dos vectores es el angulo que forman 2 vectores
