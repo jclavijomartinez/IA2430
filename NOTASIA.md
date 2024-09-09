@@ -10,6 +10,7 @@
   - [15/08/24](#150824)
   - [20/08/24](#200824)
   - [22/08/24](#220824)
+  - [3/09/24](#30924)
 
 ## 18/07/24
 
@@ -216,3 +217,16 @@ TAREA PARA EL 19/08 11:59 pm-> IMPLEMENTAR GRAD. DESC indivin
   - k means es top down, agrupo los datos y en funcion del agrupamiento, empiezo a hacer ajustes
   - correlacion: que tan fuerte es la rel lineal entre 2 variables
   - la correlacion entre dos vectores es el angulo que forman 2 vectores
+
+## 3/09/24
+
+- otros metodos no supervisados, relacionados con factorizacion de matrices, PCA
+- TAREA:ESTUDIAR SOBRE EIGEN VALORES Y EIGEN VECTORES  vectores propios (EN INGLES ES SVD singular value descomp.) mirar para que sirve, revisar el opencourseware, lin alg, gilbert strang Y RECORDAR COEFICIENTES DE LAGRANGE
+- recordando de algebra
+  - se puede descomponer una matriz cuadrada A
+  - hay una matriz que en su diagonal tiene $\mathbf{\lambda}$ que contiene sus vectores propios, solo válido para matrices cuadradas
+- PCA: Principal Component analisis)
+  - es parte de la familia de PCA, CCA (canonical correlation analysis(no lo vamos a ver en clase)), ICA (Indep. component analisis)
+  - cuando tenemos unos datos que tienen una variación grande y quiero graficarlos de una forma más sencilla, tomo la regresion y se llaman componentes principales
+  - tiene como objetivo encontrar la maxima variacion de los datos
+-
