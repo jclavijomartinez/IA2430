@@ -121,7 +121,7 @@ TAREA PARA EL 19/08 11:59 pm-> IMPLEMENTAR GRAD. DESC indivin
 
 ## 8/08/24
 
-- clasificación lineal, el objetivo si tengo una grfaica cuyo eje x es tamaño del tumos y el eje y sea clasificación (si la persona tiene o no cancer), debo encontrar un modelo que tomando como entrada el tamaño del tumor me indique si la persona tiene o no cancer
+- clasificación lineal, el objetivo si tengo una grfaica cuyo eje x es tamaño del tumor y el eje y sea clasificación (si la persona tiene o no cancer), debo encontrar un modelo que tomando como entrada el tamaño del tumor me indique si la persona tiene o no cancer
 - vamos a usar un comparador, todo lo que este debajo de 0.5 no tiene cancer, todo lo que esté arriba tiene cancer
 - hay 2 problemas de usar regresion para un clasificador
   - la salida deseada es acotada y el modelo de regresion que uso no es acotado
