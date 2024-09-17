@@ -11,6 +11,7 @@
   - [20/08/24](#200824)
   - [22/08/24](#220824)
   - [3/09/24](#30924)
+  - [17/09/24](#170924)
 
 ## 18/07/24
 
@@ -229,4 +230,19 @@ TAREA PARA EL 19/08 11:59 pm-> IMPLEMENTAR GRAD. DESC indivin
   - es parte de la familia de PCA, CCA (canonical correlation analysis(no lo vamos a ver en clase)), ICA (Indep. component analisis)
   - cuando tenemos unos datos que tienen una variación grande y quiero graficarlos de una forma más sencilla, tomo la regresion y se llaman componentes principales
   - tiene como objetivo encontrar la maxima variacion de los datos
--
+
+## 17/09/24
+
+- SVD
+  - factorizacion de matrices: implica multiplicacion, descomponer una expresion en factores
+  - la matriz A = B*C*D
+  - el rango es la dispersion de los elementos
+  - los factores tienenel mismo rango pero representan menos dispersion
+  - Factorizacion LU lower triangular - upper triangular: hay elementos arriba o abajo de la matriz, se puede aplicar para matrices cuadradas
+  - descomposicion en eigenvectores
+    - A es unamatriz con los eigenvectores de X en sus columnas y A es una matriz diagonal donde cada elemento de la diagonal es el aigenvalor asociado al respectivo eigenvector
+    - me permite atar dos subespacios de las matrices
+    - hay espacios complementarios
+- Lo que hace PCA es una reducción de dimensionalidad
+  - se eliminan direcciones de variacion de los datos
+- SEGUNDO PROYECTO: SISTEMA DE RECOMENDACIÓN
