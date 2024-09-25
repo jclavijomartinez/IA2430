@@ -12,6 +12,7 @@
   - [22/08/24](#220824)
   - [3/09/24](#30924)
   - [17/09/24](#170924)
+  - [24/09/24](#240924)
 
 ## 18/07/24
 
@@ -240,9 +241,34 @@ TAREA PARA EL 19/08 11:59 pm-> IMPLEMENTAR GRAD. DESC indivin
   - los factores tienenel mismo rango pero representan menos dispersion
   - Factorizacion LU lower triangular - upper triangular: hay elementos arriba o abajo de la matriz, se puede aplicar para matrices cuadradas
   - descomposicion en eigenvectores
-    - A es unamatriz con los eigenvectores de X en sus columnas y A es una matriz diagonal donde cada elemento de la diagonal es el aigenvalor asociado al respectivo eigenvector
+    - A es una matriz con los eigenvectores de X en sus columnas y A es una matriz diagonal donde cada elemento de la diagonal es el aigenvalor asociado al respectivo eigenvector
     - me permite atar dos subespacios de las matrices
     - hay espacios complementarios
 - Lo que hace PCA es una reducción de dimensionalidad
   - se eliminan direcciones de variacion de los datos
 - SEGUNDO PROYECTO: SISTEMA DE RECOMENDACIÓN
+
+## 24/09/24
+
+- Redes Neuronales
+  - interpretabilidad: puedo saber como entrada afecta la salida
+  - las redes neuronales encuentran las relaciones no lineales más difíciles
+  - las neuronas son regresiones lineales o logísticas
+  - nacen de la hipotesis de la neuro-plasticidad del cerebro, que el cerebro es como plastilina, se hacen caminos que se usan mas o menos dependiendo de lo que se hace cada día, cambiar habitos
+  - el neuro-rewiring dice que: "Si uno conecta un sensor al cerebro, el cerebro aprenderá a manejar la info que le suministra"
+  - Neuronas
+    - los bloques base del cerebro
+    - compuesta por: soma, dendrita (reciben estimulos, entrada a la neurona),terminal del axon
+    - cuando hay activación de las neuronas, se propaga un potencial de accion (base de todas las señales bioelectricas)
+    - las neuronas responden a neurotransmisores, si hay suficientes se activan
+    - espacio refractario, cuando se activa el potencial de accion, si hay mas excitacion, no se activa el potencial de accion
+  - en 1943 McCulloch y Pitts querian representar el comportamiento de la neurona con un modelo math. sencillo
+    - las entradas son binarias
+    - cada neurona tiene un valor de umbral fijo
+    - todas las entradas tienen pesos identicos $\omega$
+    - entradas inhibitorias tienen un veto absoluto sobre la salida
+  - PERCEPTRON
+    - los pesos y umbrales pueden ser diferentes
+    - pesos + o -
+  - lo que el modelo aprendió está en los $\omega$
+  - lo que hace esto, es que tanto se parece una entrada al patrón almacenado en los pesos
