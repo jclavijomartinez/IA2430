@@ -13,6 +13,7 @@
   - [3/09/24](#30924)
   - [17/09/24](#170924)
   - [24/09/24](#240924)
+  - [01/10/24](#011024)
 
 ## 18/07/24
 
@@ -272,3 +273,14 @@ TAREA PARA EL 19/08 11:59 pm-> IMPLEMENTAR GRAD. DESC indivin
     - pesos + o -
   - lo que el modelo aprendió está en los $\omega$
   - lo que hace esto, es que tanto se parece una entrada al patrón almacenado en los pesos
+
+## 01/10/24
+
+- problema del percetron
+  - mismos problemas de la reg. logistica
+  - problemas de XOR (compuerta lógica), los puntos están distribuidos de tal manera que los puntos no puedan ser separados (separar los rojos de los verdes)
+  - las redes neuronales tratan de imitar las interconexiones entre neuronas en el cerebro (capas y neuronas)
+- las redes basicas tienen una rquitectura feed forward (fully connected)
+  - capa de entrada, conexion entre mi primera capa y las capas ocultas
+  - las neuronas de la misma capa no están conectadas entre si
+  - cada neurona esta conectada a todas las capas de la capa anterior
