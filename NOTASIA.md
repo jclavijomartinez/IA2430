@@ -14,6 +14,7 @@
   - [17/09/24](#170924)
   - [24/09/24](#240924)
   - [01/10/24](#011024)
+  - [15/10/24](#151024)
 
 ## 18/07/24
 
@@ -284,3 +285,24 @@ TAREA PARA EL 19/08 11:59 pm-> IMPLEMENTAR GRAD. DESC indivin
   - capa de entrada, conexion entre mi primera capa y las capas ocultas
   - las neuronas de la misma capa no están conectadas entre si
   - cada neurona esta conectada a todas las capas de la capa anterior
+
+## 15/10/24
+
+- implementacion de redes neuronales
+  - el profe usa un framework (conjunto de librerías que sirven para algo) que se llama pythorch
+  - empezamos con problemas de clasificación
+  - import torch (crear un ambiente en conda) visitar la pagina de pythorch y mirar la version de python para que sea compatible
+  - from torch import nn
+  - import torch.nn.functional as F
+  - por cada clasificador, crear una clase
+  - los tensores son otra manera de organizar datos, tienen dimensiones, son algo parecido a matrices en 3D.
+  - es importante siempre normalizar los datos
+    - porque cada parametro, va a importar  casi lo mismo a la salida
+  - el momentum es un promedio de las derivadas anteriores
+    - me permite nunca quedar en el maximo
+  - epocas numero de veces
+  - decirle al modelo que va a estar en modo de entrenamiento
+  - el loss de entrenamiento siempre debe disminuir, el de prueba si sube, puede indicar sobreajuste
+  - revisar curva de entrenamiento como curva de validacion
+  - el poder, es que yo no le digo la tranformacion no lineal, el la aprende sola
+  - una SVM aproxima y = abs(x) de manera muy burda, las redes pueden representar funciones de manera mas efctiva
