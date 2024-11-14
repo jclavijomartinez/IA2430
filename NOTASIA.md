@@ -15,6 +15,11 @@
   - [24/09/24](#240924)
   - [01/10/24](#011024)
   - [15/10/24](#151024)
+  - [22/10/24](#221024)
+  - [24/10/24](#241024)
+  - [29/10/24](#291024)
+  - [05/11/24](#051124)
+  - [07/11/24](#071124)
 
 ## 18/07/24
 
@@ -306,3 +311,90 @@ TAREA PARA EL 19/08 11:59 pm-> IMPLEMENTAR GRAD. DESC indivin
   - revisar curva de entrenamiento como curva de validacion
   - el poder, es que yo no le digo la tranformacion no lineal, el la aprende sola
   - una SVM aproxima y = abs(x) de manera muy burda, las redes pueden representar funciones de manera mas efctiva
+
+## 22/10/24
+
+- Evaluacion y seleccion de modelos
+  - como se va a comportar el modelo en datos reales
+  - el dataset lo dividimos en 2, habitualmente, 80% 20%
+  - yo hago la division al priuncipio y despues me olvido, estos datos nunca los ha visto el modelo
+  - un modelo sobreajustado funciona perfecot en train, pero con datos nuevos funciona super mal
+- acercamiento 2: hiperparametros
+  - el 80%, lo vuelvo a dividir, en entrenamiento y validación
+  - el 64% es train y el 16% es val
+  - con el 16%, estoy estimando como el modelo dse comporta frente a datos no vistos, selecciono el mejor modelo
+- acercamiento 3: cross validation (validacion cruzada)
+  - k-fold cross validation
+  - dividimos el 80% en k bloques
+- 4to acercamiento: como sacamos el 80 y 20 aleatorios, no podemos preservar la forma de los datos
+  - ¿Puedo confiar en la particion inicial hecha del 80/20 de tal forma que las métricas de test sean adecuadas?
+  - como la particion es aleatoria, escojer un solo set de test puede estar sesgado
+  - se repite todo el proceso n veces
+PROYECTO FINAL: EL PROFE QUIERE VER GRÁFICAS COMO SE COMPORTAN CADA UNO DE LOS DIFERENTES MODELOS QUE SE VAN A USAR, HABLAR SOBRE LA DISPERSION DE LOS VALORES DE ACCURACY, curvas de intervalos de confianza SACAR DESCRIPCIONES ESTGADÍSTICAS DE LOS DATOS, USAR TODOS LOS MODELOS QUE HEMOS VISTO, HACER MAS DE 5
+- corolario al 4to: bootstrapping CON RESAMPLEO - ¿que hago cuando tengo pocos datos?
+  - aumento de conjuntos de entrenamientos
+  - las bolsas, contienen el numero de elementos que necesito, pero pueden estar repetidos
+
+## 24/10/24
+
+- SVM (support vector machines)
+  - margen: la distancia mas corte entre las observaciones y el umbral (ejemplo de los pesos de las ratas)
+    - cuando el margen está en la mitad de las observacione, el margen está en su maximo, es un maximal margin classifire
+    - los MMC son demasiado sensibles a outliers, se puede hacer mejor, para un umbral no tan sensible a outliers, debemos permitir misclasificaciones
+    - todo el ML, tiene un bias/variance tradeoff
+  - ideas subyacentes:
+    - empezar con datos en una dimension relativamente baja
+    - mover los datos a una dimension mayor
+    - encontrar un SVC que separe los datos en dimensiones mas altas en 2 grupos
+  - para hacer las matematicas de dimanesiones altas podibles, SVM usa las funciones de kernel para encontrara sistematicamente SVC en altas dimensiones
+
+## 29/10/24
+
+- métricas de evaluación
+  - son para clasificadores y modelos de regresion, los clustering es dificil evaluarlos
+  - matriz de confusion
+    - metodo estadístico de conteo, me permite identificar como esta funcionando mi clasificador
+    - en las columnas esta la clase predicha, en las filas los valores reales de la clase
+    - la diagonal principal me dice como se comporta mi modelo
+    - la diagonal secundaria, habla de errores, quiero minimizarlos
+    - accuracy: TP+TN/(total elementos)
+    - las demás medidas están en el notebook metricas de evaluacion
+    - precision: % de datos que dicen ser y realmente son +
+    - siempre usar al menos 2
+    - en muchos problemas hay mucho desbalanceo, tengo mucho de una cosa y poco de otra
+    - el accuracy es sensible a donde hay datos
+    - pensar siempre que todo esta mal, tener ojo crítico
+  - F1 score
+    - presicion con recall (TN)
+  - Reciever operating curve (curva ROC)
+    - se lllama ROC, porque en la WWII, había gente especializadas en ver radares y detectar un avion, los pajaros tambien aparecian y se confundian con los aviones, un operador estaba entrenado para saber que era un avion o no, lo medían para ver que tambien podía distinguir ambas cosas, hacian una curva y por eso se llama así
+    - como se comporta mi clasificador en diferentes umbrales que yo tomo
+  - metricas de clasificacion
+  - el error debería variar menos que la señal
+
+## 05/11/24
+
+- SVM intuicion, no tanta mate
+  - vapnick, en el 92 llega a SVM, el envía esta soluciona NIPS (una de las conferencias mas grandes de ML), le rechazaron el paper.
+  - lo publicó en un journal, no esperó nada y SVM se volvio el estado del arte durante 20 años, del 92 al 2012
+  - en 2012 fue destronado por deep learning
+  - UTIL: probar si dos modelos son estadísticamente diferentes, si no la hay, escojer el mas sencillo (Occam razon)
+  - HAY QUE USARLAS PARA EL PROYECTO
+
+## 07/11/24
+
+- PROYECTO FINAL:
+  - SI HAY SOLO CODIGO LA MAX NOTA ES 1.5
+  - hay que entrenar varios modelos, podemos usar funcs de scikitlearn, no hay que implementar nada de 0, entrenar cada algoritmo al menos 10 veces
+  - son varios problemas de clasificacion y regresion, usar todas las herramientas que hemos visto
+  - necesitamos elegir un modelo (compararlos)
+    - usar bootstrapping y usar intervalos de confianza
+  - buscar que es el test estadístico kruskalwallis
+  - analisis de todo
+  - contestar las preguntas de forma explicita
+  - lo mas importante es presentar los resultados muy bien presentados, si se coloca una figura, hablar sobre ella, si yo quito la figura y no cambia nada el texto, ¿para que ponerla?
+- NLP (procesamiento natural de lenguaje)
+  - 2010 - se crea el dataset imagenet 1M de imagenes, 1000 clases, 1000 imagenes por clase - todo el mundo empezó a probar CV contra imagenet
+  - Deep Learning nace con Alexnet, red convolucional que logró tener 70% de accuracy con imagenet
+  - DL propone el uso de nuevas capas, que tienen menos parametros que la feed forward
+  - LO MAS IMPORTANTE PARA ALEX ES EL PRODUCTO PUNTO
